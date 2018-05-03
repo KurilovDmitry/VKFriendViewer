@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">VKFriendViewer</string>
+    <string name="login_layout_login_hint">Login</string>
+    <string name="login_layout_password_hint">Password</string>
+    <string name="login_layout_button_login">Login</string>
+    <string name="friend_layout_user_image">Photo</string>
+
+
+    <integer name="com_vk_sdk_AppId">6458929</integer>
+    <string name="com_vk_sdk_AppId_name">com_vk_sdk_AppId</string>
+</resources>
