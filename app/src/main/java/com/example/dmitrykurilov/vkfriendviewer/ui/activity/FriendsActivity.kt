@@ -109,7 +109,7 @@ class FriendsActivity : MvpAppCompatActivity(), FriendsView {
     }
 
     override fun authorise() {
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, LoginActivity::class.java)
         startActivityForResult(intent, AUTHORISE_REQUEST)
     }
 

@@ -9,18 +9,17 @@ import android.webkit.CookieManager
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.example.dmitrykurilov.vkfriendviewer.R
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.login_layout.*
 import java.util.regex.Pattern
 
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
-    private val TAG = "VK.Auth"
-    private val redirect_url = "https://oauth.vk.com/blank.html"
+    private val redirectUrl = "https://oauth.vk.com/blank.html"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.login_layout)
 
         login_layout_webview.settings.javaScriptEnabled = true
         login_layout_webview.clearCache(true)
@@ -49,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         if (url == null)
             return
 
-        if (url.startsWith(redirect_url)) {
+        if (url.startsWith(redirectUrl)) {
             if (!url.contains("error=")) {
                 val auth = parseRedirectUrl(url)
                 val intent = Intent()
